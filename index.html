@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
   </head>
   <body>
+    <script> //esse script checa se seu browser suporta webcomponents. Caso não suporte, carrega a biblioteca webcomponents
+      var testarWebComponents = 'registerElement' in document &&
+                                'createShadowRoot' in HTMLElement.prototype &&
+                                'import' in document.createElement('link') &&
+                                'import' in document.createElement('link');
+      if (testarWebComponents) console.log('Legal! Seu browser tem suporte nativo aos webcomponents!');
+      else {
+        document.write('<script src="bower_components/webcomponentsjs/webcomponents.min.js" onload="loaded();"><\/script>');
+        console.log("Seu browser não tem suporte nativo aos webcomponents, mas isso não é problema.");
+      }
+      function loaded(){console.log("webcomponents.min.js carregado. Agora é possível usar webcomponents.");}
+    </script>
 
   </body>
 </html>
