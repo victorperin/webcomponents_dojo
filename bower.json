@@ -1,0 +1,19 @@
+{
+  "name": "webcomponents_dojo",
+  "version": "0.0.0",
+  "homepage": "https://github.com/victorperin/webcomponents_dojo",
+  "authors": [
+    "Victor Perin <me@victorperin.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "webcomponentsjs": "~0.7.1"
+  }
+}
