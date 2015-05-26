@@ -9,9 +9,9 @@ class AvatarImage extends HTMLImageElement { //ES6 classes (Orientação a objet
         if (!nome){throw new Error('Username attribute is required.');}
         else {
           var url = 'avatar/' + encodeURI(nome) + ".jpg";
-          var shadow = this.createShadowRoot();
-          var image = shadow.appendChild(document.createElement('img'));
-          image.setAttribute('src', url);
+          var shadow = this.createShadowRoot(); //cria uma shadow DOM, aprenda mais: http://loopinfinito.com.br/2012/07/17/sou-dom-shadow-dom/
+          var image = shadow.appendChild(document.createElement('img')); //cria um elemento img dentro da shadow DOM
+          image.setAttribute('src', url); //define a source da imagem no ShadowDOM
         }
     }
 }
