@@ -5,7 +5,7 @@ class AvatarImage extends HTMLImageElement {
         var self = this,
             nome = this.getAttribute('nome');
 
-        if (nome) {var url = 'avatar/' + nome + ".jpg";}
+        if (nome) {var url = 'avatar/' + encodeURI(nome) + ".jpg";}
         else {throw new Error('Username attribute is required.');}
         var shadow = this.createShadowRoot();
         var image = shadow.appendChild(document.createElement('img'));
