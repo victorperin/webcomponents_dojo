@@ -9,12 +9,12 @@
                                 'createShadowRoot' in HTMLElement.prototype &&
                                 'import' in document.createElement('link') &&
                                 'import' in document.createElement('link');
-      if (testarWebComponents) console.log('Legal! Seu browser tem suporte nativo aos webcomponents!');
+      if (testarWebComponents) console.log('Legal! Seu browser tem suporte nativo aos CustomElements!');
       else {
-        document.write('<script src="bower_components/webcomponentsjs/webcomponents.min.js" onload="loaded();"><\/script>');
-        console.log("Seu browser não tem suporte nativo aos webcomponents, mas isso não é problema.");
+        document.write('<script src="bower_components/webcomponentsjs/CustomElements.min.js" onload="loaded();"><\/script>');
+        console.log("Seu browser não tem suporte nativo aos CustomElements, mas isso não é problema.");
       }
-      function loaded(){console.log("webcomponents.min.js carregado. Agora é possível usar webcomponents.");}
+      function loaded(){console.log("CustomElements.min.js carregado. Agora é possível usar webcomponents.");}
     </script>
 
   </body>
